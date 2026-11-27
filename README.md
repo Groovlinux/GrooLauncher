@@ -20,24 +20,23 @@
 ### GROO 도구
 | 프로그램 | 설명 | 비고 |
 | :--- | :--- | :--- |
-| **GrooCAM** | 카메라 검사 및 영상 모니터링 도구 | Windows 10 이상 (x64) |
-| **PdfStudioLite** | 경량 PDF 뷰어 및 편집 유틸리티 | |
-| **PLC분석기** | PLC(Mitsubishi QPLC Works2, 
-LS-XGK XG5000) Project 프로그램 분석 도구 | Windows 10 이상 |
-| **Groo DWG Viewer** | CAD 도면(DWG / DXF) 경량 뷰어 | |
-| **GrooCapture** | 화면 캡처 및 이미지 저장 도구 | |
-| **GrooFileFinder** | 빠른 파일 및 폴더 검색 도구 | |
-| **TreeInfoCopy** | 폴더 구조(트리) 정보 복사 도구 | |
+| **GrooCAM** | 카메라 검사 및 영상 모니터링 도구 | Windows x64/x86 |
+| **PdfStudioLite** | 경량 PDF 뷰어 및 편집 유틸리티 | Windows x64/x86 |
+| **PLC분석기** | PLC(Mitsubishi QPLC Works2, LS-XGK XG5000) 프로그램 분석 도구 | Windows 10 이상 |
+| **Groo DWG Viewer** | CAD 도면(DWG / DXF) 경량 뷰어 | Windows x64/x86 |
+| **GrooCapture** | 화면 캡처 및 이미지 저장 도구 | Windows x64/x86 |
+| **GrooFileFinder** | 빠른 파일 및 폴더 검색 도구 | Windows x64/x86 |
+| **TreeInfoCopy** | 폴더 구조(트리) 정보 복사 도구 | Windows x64/x86 |
 | **GROO WindowsTweaker** | 윈도우 최적화 및 시스템 설정 트윅 | 관리자 권한 권장 |
 
 ### 시스템 / 유틸리티
 | 프로그램 | 설명 | 비고 |
 | :--- | :--- | :--- |
-| **DiskPulse** | 실시간 디스크 변경 사항 모니터링 | |
-| **TreeInfo** | 디렉터리 용량 및 파일 트리 분석 | |
-| **IDDT v2.6.1** | 네트워크/시스템 진단 유틸리티 | |
-| **USB 안전 제거** | USB 저장장치 안전 제거 도구 | |
-| **BGInfo** | 바탕화면 시스템 정보 표시 | |
+| **DiskPulse** | 실시간 디스크 변경 사항 모니터링 | Windows x64/x86 |
+| **TreeInfo** | 디렉터리 용량 및 파일 트리 분석 | Windows x64/x86 |
+| **IDDT v2.6.1** | 네트워크/시스템 진단 유틸리티 | Windows x64/x86 |
+| **USB 안전 제거** | USB 저장장치 안전 제거 도구 | Windows x64/x86 |
+| **BGInfo** | 바탕화면 시스템 정보 표시 | Windows x64/x86 |
 
 ---
 
