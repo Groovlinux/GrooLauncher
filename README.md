@@ -22,7 +22,7 @@
 | :--- | :--- | :--- |
 | **GrooCAM** | 카메라 검사 및 영상 모니터링 도구 | Windows 10 이상 (x64) |
 | **PdfStudioLite** | 경량 PDF 뷰어 및 편집 유틸리티 | |
-| **PLC분석기** | PLC(Mitsubishi QPLC Works2 Project, LS-XGK/XGB/XBM XG5000 Project) 프로그램 분석 도구 | Windows 10 이상 |
+| **PLC분석기** | PLC(Mitsubishi QPLC Works2, LS-XGK XG5000) Project 프로그램 분석 도구 | Windows 10 이상 |
 | **Groo DWG Viewer** | CAD 도면(DWG / DXF) 경량 뷰어 | |
 | **GrooCapture** | 화면 캡처 및 이미지 저장 도구 | |
 | **GrooFileFinder** | 빠른 파일 및 폴더 검색 도구 | |
