@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrooLauncher 사용설명서</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-soft: #eff6ff;
+      --border: #e5e7eb;
+      --warn-bg: #fffbeb;
+      --warn-border: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+      padding: 32px 28px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18);
+    }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; opacity: 0.92; font-size: 15px; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    h3 { margin: 18px 0 10px; font-size: 16px; color: #111827; }
+    .alert {
+      background: var(--warn-bg);
+      border: 1px solid #fde68a;
+      border-left: 4px solid var(--warn-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 12px;
+    }
+    .tool-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+    .tool-card .name {
+      font-weight: 700;
+      font-size: 15px;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .tool-card .desc {
+      font-size: 13.5px;
+      color: #4b5563;
+      margin: 0 0 8px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .tag.admin { background: #fef2f2; color: #dc2626; }
+    .tag.win10 { background: #f3f4f6; color: #374151; }
+    ul { margin: 8px 0; padding-left: 20px; }
+    li { margin-bottom: 6px; font-size: 14.5px; }
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+    }
+    .support-box {
+      background: var(--primary-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 18px;
+      font-size: 14.5px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Portable All-in-One Toolkit</div>
+      <h1>GrooLauncher 사용설명서</h1>
+      <p>현장 엔지니어와 실무자를 위한 무설치 통합 유틸리티 런처 가이드</p>
+    </header>
+
+    <section>
+      <h2>1. 빠른 시작 (Quick Start)</h2>
+      <ul>
+        <li>다운로드한 압축 파일(`.zip`)을 원하는 폴더(또는 USB 드라이브)에 압축 해제합니다.</li>
+        <li>폴더 내 <code>GrooLauncher.exe</code>를 더블 클릭하여 실행합니다.</li>
+        <li><strong>자동 환경 인식:</strong> 실행 중인 Windows가 64비트인지 32비트인지 자동으로 판별해 적합한 실행 파일을 실행합니다.</li>
+        <li><strong>순서 변경 및 검색:</strong> 카드를 드래그해 순서를 바꿀 수 있으며(<code>GrooLauncher_order.json</code>에 저장), 상단 검색창으로 도구를 빠르게 찾을 수 있습니다.</li>
+      </ul>
+
+      <div class="alert">
+        <strong>Windows의 PC 보호(SmartScreen) 창이 뜰 경우:</strong><br />
+        개인 개발자 배포 파일은 처음 실행 시 보안 경고 창이 나타날 수 있습니다.<br />
+        창 왼쪽의 <strong>[추가 정보]</strong>를 클릭한 뒤 아래에 나타나는 <strong>[실행]</strong> 버튼을 누르면 정상 실행됩니다.
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 포함 프로그램 안내 (13종)</h2>
+
+      <h3>GROO 도구</h3>
+      <div class="grid">
+        <div class="tool-card">
+          <div class="name">GrooCAM</div>
+          <p class="desc">카메라 검사 및 영상 모니터링 도구</p>
+          <span class="tag win10">Win10 이상 (x64)</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">PdfStudioLite</div>
+          <p class="desc">경량 PDF 뷰어 및 편집 유틸리티</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">PLC분석기</div>
+          <p class="desc">PLC(QPLC, LS) 프로그램 분석 도구</p>
+          <span class="tag win10">Win10 이상</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">Groo DWG Viewer</div>
+          <p class="desc">DWG / DXF 도면 경량 뷰어</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">GrooCapture</div>
+          <p class="desc">화면 캡처 및 이미지 저장 도구</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">GrooFileFinder</div>
+          <p class="desc">빠른 파일 및 폴더 검색 도구</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">TreeInfoCopy</div>
+          <p class="desc">폴더 구조(트리) 정보 복사 도구</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">GROO WindowsTweaker</div>
+          <p class="desc">윈도우 최적화 및 시스템 설정 트윅</p>
+          <span class="tag admin">관리자 권한 권장</span>
+        </div>
+      </div>
+
+      <h3>시스템 / 유틸리티</h3>
+      <div class="grid">
+        <div class="tool-card">
+          <div class="name">DiskPulse</div>
+          <p class="desc">실시간 디스크 변경 사항 모니터링</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">TreeInfo</div>
+          <p class="desc">디렉터리 용량 및 파일 트리 분석</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">IDDT v2.6.1</div>
+          <p class="desc">네트워크 및 시스템 진단 유틸리티</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">USB 안전 제거</div>
+          <p class="desc">USB 저장장치 안전 제거 도구</p>
+          <span class="tag">포터블</span>
+        </div>
+        <div class="tool-card">
+          <div class="name">BGInfo</div>
+          <p class="desc">바탕화면 시스템 정보 표시</p>
+          <span class="tag">포터블</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 자주 묻는 질문 (FAQ)</h2>
+      <ul>
+        <li><strong>Q. 설치가 필요한가요?</strong><br />A. 아니요. 무설치 포터블 방식이므로 폴더째 복사하거나 USB에 넣어 바로 실행할 수 있습니다.</li>
+        <li><strong>Q. 일부 도구가 실행되지 않거나 권한 오류가 납니다.</strong><br />A. 런처에서 해당 도구를 마우스 우클릭한 뒤 <code>관리자 권한으로 실행</code>을 선택해 보세요.</li>
+        <li><strong>Q. 개별 프로그램만 따로 쓸 수 있나요?</strong><br />A. 네, 각 프로그램 폴더 안의 실행 파일을 직접 실행하거나 개별 배포판 ZIP을 사용하시면 됩니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. 개발자 후원 안내</h2>
+      <div class="support-box">
+        <strong>본 프로그램은 기능 제한 없이 무료로 배포됩니다.</strong><br />
+        실무와 현장에서 도움이 되셨다면 개발자에게 커피 한 잔을 후원해 주세요!<br /><br />
+        <!-- 아래 링크 및 안내 문구를 실제 후원 정보로 수정하세요 -->
+        • <strong>국내 후원 (토스 / 카카오페이):</strong> (링크 또는 QR 이미지를 여기에 추가하세요)<br />
+        • <strong>해외 후원 (Buy Me a Coffee / Ko-fi):</strong> (링크를 여기에 추가하세요)<br />
+        • <strong>문의 및 버그 제보:</strong> (이메일 또는 배포 페이지 주소를 입력하세요)
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 주의사항 및 면책 조항</h2>
+      <ul>
+        <li><code>GROO WindowsTweaker</code> 등 시스템 설정을 변경하는 기능을 사용하기 전에는 중요 데이터를 백업하고 Windows 복원 지점을 생성하는 것을 권장합니다.</li>
+        <li>본 소프트웨어는 있는 그대로("AS-IS") 제공되며, 사용 중 발생하는 데이터 손실이나 시스템 이상에 대해 제작자는 법적 책임을 지지 않습니다.</li>
+      </ul>
+    </section>
+
+    <footer>
+      GrooLauncher &amp; Groo Utility Suite
+    </footer>
+  </div>
+</body>
+</html>
